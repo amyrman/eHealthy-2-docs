@@ -1,8 +1,7 @@
 @startuml
 title
-Activity Diagram - Search Accessibility
+Activity Diagram - Search Accessibility w/ WCAG Sources
 
-(https://www.w3.org/WAI/WCAG22/quickref/)
 end title
 start
 :User accesses search;

@@ -1,0 +1,41 @@
+@startuml
+title
+Activity Diagram - Search Accessibility In Practice
+endtitle
+start
+
+repeat
+  :Enter Search Query;
+  note right
+    Ensure input field has labels
+    and ARIA attributes for accessibility.
+  end note
+
+  :Click 'Search' Button;
+  note right
+    Button should have invisible text and
+    aria-label for screen reader users.
+  end note
+
+  if (Valid Input?) then (yes)
+    :Fetch Results;
+    note right
+      Log search query and metadata
+      in parallel for analytics.
+    end note
+    :Display Results;
+    note right
+      Ensure results are accessible for
+      screen reader users.
+    end note
+  else (no)
+    :Display Error;
+    note right
+      Error messages should be accessible
+      to screen readers.
+    end note
+  endif
+repeat while (Refine Search?) is (yes)
+
+stop
+@enduml
