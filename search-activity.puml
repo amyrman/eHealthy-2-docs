@@ -1,0 +1,60 @@
+@startuml
+title
+Activity Diagram - Search Accessibility
+
+(https://www.w3.org/WAI/WCAG22/quickref/)
+end title
+start
+:User accesses search;
+
+note right
+  **Perceivable**:
+  Ensure all non-text content that is presented
+  to the user has a text alternative that serves the
+  equivalent purpose.
+end note
+
+:Enter search query;
+note right
+  **1.1.1 Non-text Content**:
+  Provide text alternatives for icons and
+  visual elements in the search input field.
+end note
+
+:Select search options;
+note right
+  **1.4.4 Resize Text**:
+  Ensure text size can be adjusted up to 200% without
+  loss of content or functionality.
+end note
+
+:Click 'Search' button;
+note right
+  **2.1.1 Keyboard**:
+  All functionality available from a keyboard.
+  No keyboard traps should be present.
+end note
+
+:Display search results;
+note right
+  **1.3.1 Info and Relationships**:
+  Information, structure, and relationships conveyed
+  through presentation can be programmatically determined.
+end note
+
+:Interact with results;
+note right
+  **2.4.7 Focus Visible**:
+  Any keyboard operable user interface has
+  a mode of operation where the keyboard focus
+  indicator is visible.
+end note
+
+if (Refine search?) then (yes)
+- Enter search query
+  stop
+else (no)
+  stop
+endif
+
+@enduml
